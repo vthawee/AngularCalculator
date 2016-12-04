@@ -1,0 +1,23 @@
+import { Component, OnInit, Input } from '@angular/core';
+import { CalService} from '../cal.service';
+
+@Component({
+  selector: 'cal-button',
+  templateUrl: './cal-button.component.html',
+  styleUrls: ['./cal-button.component.css']
+})
+export class CalButtonComponent implements OnInit {
+
+  @Input() buttonValue;
+  @Input() buttonType;
+
+  constructor(public calService: CalService) { }
+
+  ngOnInit() {
+  }
+
+  public submitValue() {
+    this.calService.addExpression(this.buttonValue);
+  }
+
+}
