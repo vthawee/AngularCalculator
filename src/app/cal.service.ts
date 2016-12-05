@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class CalService {
 
-  public result = "";
-  public expression = "";
+  public result = "0";
+  public expression = "?";
 
   constructor() { }
 

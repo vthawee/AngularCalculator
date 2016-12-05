@@ -13,6 +13,10 @@ export class CalDisplayComponent implements OnInit {
   ngOnInit() {
   }
 
+  getResult() {
+    return this.calService.result;
+  }
+
   getExpression() {
     return this.calService.expression;
   }

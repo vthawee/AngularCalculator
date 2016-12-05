@@ -1,0 +1,12 @@
+.display-area {
+    background-color: lightgrey;
+}
+.display-line {
+    text-align: right;  
+}
+.result {
+    font-size: 4rem;
+}
+.expression {
+    font-size: 1.5rem;
+}
