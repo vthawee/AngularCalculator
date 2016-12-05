@@ -1,17 +1,36 @@
-<div>
+<div class="container-fluid">
   <h3>
     Angular Calculator
   </h3>
-
-  <cal-display></cal-display>
-
-  <cal-button [buttonType]="digit" [buttonValue]="'1'"></cal-button>
-  <cal-button [buttonType]="digit" [buttonValue]="'2'"></cal-button>
-  <cal-button [buttonType]="digit" [buttonValue]="'3'"></cal-button>
-  <cal-button [buttonType]="digit" [buttonValue]="'4'"></cal-button>
-  <cal-button [buttonType]="digit" [buttonValue]="'5'"></cal-button>
-  <cal-button [buttonType]="digit" [buttonValue]="'6'"></cal-button>
-  <cal-button [buttonType]="digit" [buttonValue]="'7'"></cal-button>
-  <cal-button [buttonType]="digit" [buttonValue]="'8'"></cal-button>
-  <cal-button [buttonType]="digit" [buttonValue]="'9'"></cal-button>
+  <div class="row">
+    <cal-display class="col-xs-12"></cal-display>
+  </div>
+  <div class="row">
+    <cal-button class="col-xs-3" [buttonType]="command" [buttonValue]="'AC'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="command" [buttonValue]="'CE'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="operator" [buttonValue]="'/'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="operator" [buttonValue]="'X'"></cal-button>
+  </div>
+  <div class="row">
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'7'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'8'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'9'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="operator" [buttonValue]="'-'"></cal-button>
+  </div>
+  <div class="row">  
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'4'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'5'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'6'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="operator" [buttonValue]="'+'"></cal-button>
+  </div>  
+  <div class="row">  
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'1'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'2'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'3'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="operator" [buttonValue]="'='"></cal-button>
+  </div>
+  <div class="row">  
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'0'"></cal-button>
+    <cal-button class="col-xs-3" [buttonType]="digit" [buttonValue]="'.'"></cal-button>
+  </div>
 </div>
