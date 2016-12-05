@@ -14,10 +14,10 @@ export class CalDisplayComponent implements OnInit {
   }
 
   getResult() {
-    return this.calService.result;
+    return this.calService.getResult();
   }
 
   getExpression() {
-    return this.calService.expression;
+    return this.calService.getExpression();
   }
 }

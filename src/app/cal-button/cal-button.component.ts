@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CalService} from '../cal.service';
+import { CalService } from '../cal.service';
 
 @Component({
   selector: 'cal-button',
@@ -17,7 +17,16 @@ export class CalButtonComponent implements OnInit {
   }
 
   public submitValue() {
-    this.calService.addExpression(this.buttonValue);
+    switch (this.buttonType) {
+      case 'digit' :
+        this.calService.addDigit(this.buttonValue);
+        break;
+      case 'operator' :
+        this.calService.addOperator(this.buttonValue);
+        break;
+      case 'command' :
+        this.calService.executeCommand(this.buttonValue);
+    }
   }
 
 }
